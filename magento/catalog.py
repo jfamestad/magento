@@ -719,6 +719,56 @@ class ProductLinks(API):
         """
         return self.call('catalog_product_link.attributes', [link_type])
 
+class ProductCustomOption(API):
+    __slots__ = ()
+
+    def info(self, option_id):
+        """
+        Retrieve info for product custom option
+        :param option_id: option id
+        :return dictionary
+        """
+            return self.call('product_custom_option.info', [option_id])
+
+    def add(self, product, data):
+        """
+        Add a custom option to a product
+        :param product: id or sku or product
+        :param data: product custom option as dictionary
+        :return boolean
+        """
+        return self.call('product_custom_option.add', [product, data])
+
+    def list(self, product):
+        """
+        List product custom options
+        :param product: id or sku of product
+        :return list of dictionary
+        """
+        return self.call('product_custom_option.list', [product])
+
+    def remove(self, option_id):
+        """
+        Remove a product custom option
+        :param option_id: id of product custom option
+        :return boolean
+        """
+        return self.call('product_custom_option.remove', [option_id])
+
+    def types(self):
+        """
+        List available custom option types
+        :return list of dictionary
+        """
+        return self.call('product_custom_option.types', [])
+
+    def update(self, option_id):
+        """
+        Update an existing product
+        :param option_id: option id
+        return boolean
+        """
+        return self.call('product_custom_option.update', [option_id, data])
 
 class ProductConfigurable(API):
     """
