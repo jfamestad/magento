@@ -728,7 +728,7 @@ class ProductCustomOption(API):
         :param option_id: option id
         :return dictionary
         """
-            return self.call('product_custom_option.info', [option_id])
+        return self.call('product_custom_option.info', [option_id])
 
     def add(self, product, data):
         """
