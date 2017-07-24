@@ -481,7 +481,6 @@ class ProductAttributeSet(API):
         return self.call('catalog_product_attribute_set.attributeRemove', [attribute_id, attribute_set_id])
 
 
-
 class ProductTypes(API):
     """
     Product Types API
@@ -719,6 +718,7 @@ class ProductLinks(API):
         """
         return self.call('catalog_product_link.attributes', [link_type])
 
+
 class ProductCustomOption(API):
     __slots__ = ()
 
@@ -769,6 +769,7 @@ class ProductCustomOption(API):
         return boolean
         """
         return self.call('product_custom_option.update', [option_id, data])
+
 
 class ProductConfigurable(API):
     """
